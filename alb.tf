@@ -1,5 +1,5 @@
 # provisions ALB
-resource "aws_lb" "test" {
+resource "aws_lb" "robot_alb" {
   name               = var.ALB_NAME
   internal           = var.INTERNAL
   load_balancer_type = "application"
@@ -15,6 +15,6 @@ resource "aws_lb" "test" {
 #   }
 
   tags = {
-    Environment = "production"
+    Environment = var.ALB_NAME
   }
 }
